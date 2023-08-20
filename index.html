@@ -44,6 +44,7 @@
             <svg class="menu-toggle-icon" width="32" height="22" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
                 <use href="./images/icons.svg#icon-burger"></use>
             </svg>
+        </button>
         </div>
 </header>
 <!--Main Block-->
@@ -104,9 +105,18 @@
         <div class="container">
             <h2 class="duties">What are we doing</h2>
             <ul class="duties-list list">
-                <li class="duties-photo list"><img src="./images/job-description/rectangle1.jpg" alt="computer" width="360"></li>
-                <li class="duties-photo list"><img src="./images/job-description/Rectangle2.jpg" alt="phones" width="360"></li>
-                <li class="duties-photo list"><img src="./images/job-description/rectangle3.jpg" alt="software" width="360"></li>
+                <li class="duties-photo list">
+                    <img class="duties-photo-img" 
+                    srcset="./images/job-description/wawd-1@1x.jpg 1x, ./images/job-description/wawd-1@2x.jpg 2x"
+                    src="./images/job-description/wawd-1@1x.jpg" alt="computer" width="360"></li>
+                <li class="duties-photo list">
+                    <img class="duties-photo-img"
+                     srcset="./images/job-description/wawd-2@1x.jpg 1x, ./images/job-description/wawd-2@2x.jpg 2x"
+                    src="./images/job-description/wawd-2@1x.jpg" alt="phones" width="360"></li>
+                <li class="duties-photo list">
+                    <img class="duties-photo-img" 
+                    srcset="./images/job-description/wawd-3@1x.jpg 1x, ./images/job-description/wawd-3@2x.jpg 2x"
+                    src="./images/job-description/wawd-3@1x.jpg" alt="software" width="360"></li>
             </ul>
         </div>
     </section>
@@ -115,7 +125,10 @@
         <div class="our-team-class container">
             <h2 class="our-team">Our Team</h2>
             <ul class="employees-list list">
-                <li class="employee-photo list"><img src="./images/team/img-1.jpg" alt="employee1" width="264">
+                <li class="employee-photo list">
+                    <img class="eomployee-photo-img" 
+                    srcset="./images/team/emp-1@1x.jpg 1x, ./images/team/emp-1@2x.jpg 2x,"
+                    src="./images/team/emp-1@1x.jpg" alt="employee1" width="264">
                 <div class="employees-positions-names">
                     <h3 class="employee-name">Mark Guerrero</h3>
                     <p class="employee-job">Product Designer</p>
@@ -151,7 +164,10 @@
                     </ul>
                 </div>
                 </li>
-                <li class="employee-photo list"><img src="./images/team/img-2.jpg" alt="employee2" width="264">
+                <li class="employee-photo list">
+                    <img class="employee-photo-img"
+                    srcset="./images/team/emp-2@1x.jpg 1x, ./images/team/emp-2@2x.jpg 2x"
+                    src="./images/team/emp-2@1x.jpg" alt="employee2" width="264">
                 <div class="employees-positions-names">
                     <h3 class="employee-name">Tom Ford</h3>
                     <p class="employee-job">Frontend Developer</p>
@@ -187,7 +203,10 @@
                     </ul>
                 </div>
                 </li>
-                <li class="employee-photo list"><img src="./images/team/img-3.jpg" alt="employee3" width="264">
+                <li class="employee-photo list">
+                    <img class="employee-photo-img"
+                    srcset="./images/team/emp-3@1x.jpg 1x, ./images/team/emp-3@2x.jpg 2x"
+                    src="./images/team/emp-3@1x.jpg" alt="employee3" width="264">
                 <div class="employees-positions-names">
                     <h3 class="employee-name">Camila Garcia</h3>
                     <p class="employee-job">Marketing</p>
@@ -223,7 +242,10 @@
                     </ul>
                 </div>
                 </li>
-                <li class="employee-photo list"><img src="./images/team/img-4.jpg" alt="employee4" width="264">
+                <li class="employee-photo list">
+                    <img class="employee-photo-img" 
+                    srcset="./images/team/emp-4@1x.jpg 1x, ./images/team/emp-4@2x.jpg 2x"
+                    src="./images/team/emp-4@1x.jpg" alt="employee4" width="264">
                 <div class="employees-positions-names">
                     <h3 class="employee-name">Daniel Wilson</h3>
                     <p class="employee-job">UI Designer</p>
@@ -430,24 +452,8 @@
             </form>
             </div>
         </div>
-        <!-- Mobile menu -->
-    <div class="menu-container js-menu-container" id="mobile-menu">
-        <button class="menu-toggle js-close-menu">
-            <svg fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg" width="24" height="24">
-                <path fill-rule="evenodd"
-                    d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z"
-                    clip-rule="evenodd"></path>
-            </svg>
-        </button>
-    
-        <ul class="mobile-menu">
-            <li><a href="" class="link">About</a></li>
-            <li><a href="" class="link">Products</a></li>
-            <li><a href="" class="link">Contacts</a></li>
-            <li><a href="" class="link">Career</a></li>
-        </ul>
-    </div>
-
+       
+<!-- Mobile menu scripts -->
     <script defer src="https://cdnjs.cloudflare.com/ajax/libs/body-scroll-lock/3.1.5/bodyScrollLock.min.js"
         integrity="sha512-HowizSDbQl7UPEAsPnvJHlQsnBmU2YMrv7KkTBulTLEGz9chfBoWYyZJL+MUO6p/yBuuMO/8jI7O29YRZ2uBlA=="
         crossorigin="anonymous"></script>
