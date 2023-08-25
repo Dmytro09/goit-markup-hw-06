@@ -812,7 +812,7 @@ a.media-list:focus {
 
 @media only screen and (max-width: 767.98px) {
         .footer-container-text {
-        margin-bottom: 72px;
+        
         }
 }
 
@@ -877,13 +877,13 @@ a.media-list:focus {
 
 @media only screen and (max-width: 767.98px) {
         .footer-media-class {
-        margin-bottom: 72px;
+        
         }
 }
 
 @media only screen and (min-width: 1158px) {
         .footer-media-class {
-        margin-right: 80px;
+
         }
 }
 
@@ -944,17 +944,7 @@ a.media-list:focus {
 
 }
 
-@media only screen and (min-width: 1157.98px) {
-        .footer-subscribe {
-        width: 100%;
-        }
-}
 
-@media only screen and (min-width: 1158px) {
-        .footer-subscribe {
-        margin-left: auto;
-}
-}
 
 .footer-subscribe-title {
         font-weight: 500;
@@ -1016,6 +1006,7 @@ media only screen and (min-width: 768px) {
 
 .footer-form-subscribe {
         display: flex;
+        flex-wrap: wrap;
         gap: 24px;
         align-items: center;
         justify-content: center;
@@ -1024,6 +1015,21 @@ media only screen and (min-width: 768px) {
 
 .footer-subscribe-input::placeholder {
         color: #ffffff;
+}
+
+@media only screen and (max-width: 767.98px) {
+
+        .footer-subscribe,
+        .footer-subscribe-input,
+        .footer-subscribe-label {
+        width: 100%;
+        }
+}
+
+@media only screen and (min-width: 1158px) {
+        .footer-subscribe {
+                margin-left: auto;
+        }
 }
 
 /**
@@ -1533,6 +1539,8 @@ menu-toggle {
         }
 }
 
+/* Mobile Burger Button */
+
 .menu-toggle:hover,
 .menu-toggle:focus {
         background-color: rgba(0, 0, 0, 0.1);
@@ -1547,13 +1555,20 @@ menu-toggle {
         padding: 32px;
         background-color: #3f51b5;
         z-index: 999;
-
         transform: translateX(100%);
         transition: transform 250ms ease-in-out;
 }
 
 .menu-container.is-open {
         transform: translateX(0);
+}
+
+.menu-toggle.js-close-menu {
+        border: 1px solid var(--button-background);
+        border-radius: 50%;
+        cursor: pointer;
+        width: 24px;
+        height: 24px;
 }
 
 .menu-container .menu-toggle {
@@ -1569,6 +1584,18 @@ menu-toggle {
         list-style: none;
 }
 
+.mobile-menu {
+        padding: 0;
+        margin: 0;
+        list-style: none;
+        width: fit-content;
+        margin-bottom: auto;
+}
+
+.mobile-menu-item:not(:last-child) {
+        margin-bottom: 40px;
+}
+
 .mobile-menu .link {
         display: block;
         padding: 10px;
@@ -1577,4 +1604,43 @@ menu-toggle {
 }
 
 
+.menu-container {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        padding-top: 80px;
+        padding-right: 35px;
+        padding-left: 40px;
+        padding-bottom: 40px;
+        background-color: var(--primary-white-color);
+        z-index: 999;
+        transform: translateX(100%);
+        transition: transform 250ms ease-in-out;
+        display: flex;
+        flex-direction: column;
+}
+
+.menu-container.is-open {
+        transform: translateX(0);
+}
+
+.menu-toggle:hover,
+.menu-toggle:focus {
+        background-color: rgba(0, 0, 0, 0.1);
+}
+
+.mobile-menu-link {
+        text-decoration: none;
+        color: var(--logo-color);
+        font-size: 36px;
+        font-weight: 700;
+        line-height: 1.11;
+        letter-spacing: 0.72px;
+        text-transform: capitalize;
+}
+
+.mobile-menu-link.active {
+        color: var(--button-background;
 }
