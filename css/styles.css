@@ -188,7 +188,7 @@ h1, h2, h3, h4, h5, h6, p, ul {
         left: 0;
         width: 100%;
         height: 4px;
-        background-color: #404BBF;
+        background-color: none;
         border-radius: 2px;
         bottom: -1px;
         box-sizing: border-box;
@@ -1514,7 +1514,7 @@ a.media-list:focus {
   | Mobile menu
   |============================
 */
-menu-toggle {
+.menu-toggle {
         min-height: 40px;
         min-width: 40px;
         display: flex;
@@ -1614,6 +1614,7 @@ menu-toggle {
         line-height: 1.11;
         letter-spacing: 0.72px;
         text-transform: capitalize;
+        
 }
 
 .mobile-menu-link.active {
