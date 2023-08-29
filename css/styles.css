@@ -1608,34 +1608,6 @@ menu-toggle {
         text-decoration: none;
 }
 
-
-.menu-container {
-        position: fixed;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        padding-top: 80px;
-        padding-right: 35px;
-        padding-left: 40px;
-        padding-bottom: 40px;
-        background-color: var(--primary-white-color);
-        z-index: 999;
-        transform: translateX(100%);
-        transition: transform 250ms ease-in-out;
-        display: flex;
-        flex-direction: column;
-}
-
-.menu-container.is-open {
-        transform: translateX(0);
-}
-
-.menu-toggle:hover,
-.menu-toggle:focus {
-        background-color: rgba(0, 0, 0, 0.1);
-}
-
 .mobile-menu-link {
         text-decoration: none;
         color: var(--logo-color);
@@ -1647,5 +1619,5 @@ menu-toggle {
 }
 
 .mobile-menu-link.active {
-        color: var(--button-background;
+        color: var(--button-background);
 }
