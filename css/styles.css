@@ -265,9 +265,9 @@ h1, h2, h3, h4, h5, h6, p, ul {
 }
 @media only screen and (min-width: 768px) {
         .address-list {
-        gap: 12px;
         display: flex;
         flex-direction: column;
+        gap: 12px;
         }
 }
 
@@ -275,9 +275,9 @@ h1, h2, h3, h4, h5, h6, p, ul {
 @media only screen and (min-width: 1158px) {
 .address-list {
         display: flex;
-        gap: var(--indent);
-        --items: 2;
-        --indent: 40px;
+        flex-direction: row;
+        align-items: center;
+        gap: 40px;
 }
 }
 
@@ -496,10 +496,7 @@ h1, h2, h3, h4, h5, h6, p, ul {
 }
 @media only screen and (min-width: 768px) {
         .features-list{
-        display: flex;
-        flex-basis: calc((100% - var(--indent) * (var(--items) - 1)) / var(--items));
-        flex-direction: column;
-        gap: 8px;
+        max-width: 264px;
         }
 }
 
@@ -568,6 +565,7 @@ h1, h2, h3, h4, h5, h6, p, ul {
         height: 112px;
         border-radius: 4px;
         background-color: #f4f4fd;
+        margin-bottom: 8px;
                         }
                 }
 /**
@@ -784,8 +782,9 @@ a.media-list:focus {
 
 @media only screen and (min-width: 768px) and (max-width: 1157.98px) {
         .container-footer {
-        padding: 0 108px;
-        }
+        margin: auto;
+        width: 584px;
+}
 }
 
 @media only screen and (min-width: 768px) {
@@ -892,7 +891,6 @@ a.media-list:focus {
         line-height: 1.5;
         letter-spacing: 0.02em;
         margin-bottom: 16px;
-        margin-bottom: 16px;
         text-align: center;
 
 }
@@ -907,7 +905,6 @@ a.media-list:focus {
         display: flex;
         align-items: center;
         gap: 16px;
-        margin-top: 8px;
 }
 
 .footer-media-item {
@@ -1296,17 +1293,29 @@ a.media-list:focus {
 }
 
 .modal {
+        padding: 72px 16px 24px 16px;
         position: absolute;
         top: 50%;
         left: 50%;
         transform: translateX(-50%) translateY(-50%);
-        width: 408px;
+        width: 100%;
         min-height: 584px;
-        flex-shrink: 0;
+        background-color: #FCFCFC;
         border-radius: 4px;
-        background: #FCFCFC;
         box-shadow: 0px 2px 1px 0px rgba(0, 0, 0, 0.20), 0px 1px 3px 0px rgba(0, 0, 0, 0.12), 0px 1px 1px 0px rgba(0, 0, 0, 0.14);
         transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+@media only screen and (min-width: 428px) {
+.modal {
+        width: 408px;
+}
+}
+
+@media only screen and (min-width: 768px) {
+.modal {
+        padding: 72px 24px 24px 24px;
+}
 }
 
 .modal-btn {
@@ -1339,22 +1348,6 @@ a.media-list:focus {
         color: #fff;
         border: none;
 }
-
-.modal {
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translateX(-50%) translateY(-50%);
-        width: 408px;
-        height: 584px;
-        min-height: 584px;
-        background: var(--dairy, #FCFCFC);
-        border-radius: 4px;
-        flex-shrink: 0;
-        transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
-        box-shadow: 0px 2px 1px 0px rgba(0, 0, 0, 0.20), 0px 1px 3px 0px rgba(0, 0, 0, 0.12), 0px 1px 1px 0px rgba(0, 0, 0, 0.14);
-        padding: 72px 24px 24px 24px;
-        }
 
 .modal-title {
         font-weight: 500;
@@ -1549,7 +1542,10 @@ a.media-list:focus {
         left: 0;
         width: 100vw;
         height: 100vh;
-        padding: 32px;
+        padding-top: 80px;
+        padding-right: 35px;
+        padding-left: 40px;
+        padding-bottom: 40px;
         background-color: #ffffff;
         z-index: 999;
         transform: translateX(100%);
@@ -1563,7 +1559,7 @@ a.media-list:focus {
 }
 
 .menu-toggle.js-close-menu {
-        border: 1px solid var(--border-button-color);
+        border: 1px solid var(--logo-color);
         border-radius: 50%;
         cursor: pointer;
         width: 24px;
@@ -1585,6 +1581,8 @@ a.media-list:focus {
         padding: 0;
         margin: 0;
         list-style: none;
+        width: fit-content;
+        margin-bottom: auto;
 }
 
 .mobile-menu {
