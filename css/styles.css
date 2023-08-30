@@ -97,7 +97,7 @@ h1, h2, h3, h4, h5, h6, p, ul {
         letter-spacing: 0.03em;
         text-transform: uppercase;
         align-items: center;
-        margin-right: 120px;
+        margin-right: 76px;
         color: #404bbf;
         padding-top: 25.5px;
         padding-bottom: 23.5px;
@@ -112,7 +112,7 @@ h1, h2, h3, h4, h5, h6, p, ul {
 
 @media only screen and (min-width: 1158px) {
         .header-link-logo .header-name {
-        margin-right: 76px;
+      
         }
 }
 
@@ -203,11 +203,11 @@ h1, h2, h3, h4, h5, h6, p, ul {
          */
 }
 
-@media only screen and (min-width: 1158px) {
+/* @media only screen and (min-width: 1158px) {
         .address-items {
         flex-basis: calc((100% - var(--indent) * (var(--items) - 1)) / var(--items));
         }
-}
+} */
 
 @media only screen and (min-width: 768px) and (max-width: 1157.98px) {
         .address-items:not(:last-child) .address-link {
@@ -224,7 +224,6 @@ h1, h2, h3, h4, h5, h6, p, ul {
 
   .address-items:last-child {
         padding-top: 0;
-        padding-bottom: 16px;
   }
 
 .address-link {
@@ -286,14 +285,17 @@ h1, h2, h3, h4, h5, h6, p, ul {
 }
 
 .menu-toggle {
+        min-height: 24px;
+        min-width: 24px;
         display: flex;
-        justify-content: center;
         align-items: center;
-        min-width: 32px;
-        min-height: 22px;
+        justify-content: center;
+        margin: 0;
         padding: 0;
-        border: none;
         background-color: transparent;
+        cursor: pointer;
+        border: none;
+        border-radius: 50%;
         outline: none;
 }
 
@@ -1507,7 +1509,7 @@ a.media-list:focus {
   | Mobile menu
   |============================
 */
-.menu-toggle {
+/* .menu-toggle {
         min-height: 40px;
         min-width: 40px;
         display: flex;
@@ -1521,7 +1523,7 @@ a.media-list:focus {
         border: none;
         border-radius: 50%;
         outline: none;
-}
+} */
 
 @media (min-width: 768px) {
         .menu-toggle {
@@ -1574,7 +1576,7 @@ a.media-list:focus {
 .menu-container .menu-toggle {
         position: absolute;
         top: 24px;
-        right: 24px;
+        right: 16px;
 }
 
 .mobile-menu {
