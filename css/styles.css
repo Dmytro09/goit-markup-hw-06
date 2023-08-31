@@ -217,7 +217,6 @@ h1, h2, h3, h4, h5, h6, p, ul {
 
 @media only screen and (min-width: 768px) and (max-width: 1157.98px) {
         .address-items:first-child  {
-        padding-top: 16px;
         padding-bottom: 0;
         }
 }        
@@ -251,6 +250,7 @@ h1, h2, h3, h4, h5, h6, p, ul {
 .company-address {
         font-style: normal;
         margin-left: auto;
+        display: block;
 }
 
 @media only screen and (max-width: 767.98px) {
@@ -374,8 +374,8 @@ h1, h2, h3, h4, h5, h6, p, ul {
 }
 @media only screen and (min-width: 768px) {
         .hero-section {
-        padding-top: 188px;
-        padding-bottom: 188px;
+        padding-top: 112px;
+        padding-bottom: 112px;
         }
 }
 
@@ -446,17 +446,8 @@ h1, h2, h3, h4, h5, h6, p, ul {
         .feature-section {
         padding-top: 120px;
         padding-bottom: 120px;
-        }
-}
+        }}
 
-.features-section-list{
-        /* display: flex;
-        gap: 24px;
-        margin-left: auto;
-        margin-right: auto;
-        justify-content: space-between; */
- 
-}
 
 .features-section {
         text-align: center;
@@ -467,6 +458,11 @@ h1, h2, h3, h4, h5, h6, p, ul {
         text-transform: capitalize;
         margin-bottom: 8px;
         color: var(--logo-color);
+}
+
+.features-section-list {
+        gap: 72px 24px
+
 }
 
 @media only screen and (min-width: 768px) {
@@ -487,8 +483,7 @@ h1, h2, h3, h4, h5, h6, p, ul {
 }
 
 .features-list {
-        /* width: calc((100% - 72px) / 4);
-        flex-direction: column; */
+        max-width: 396px;
 }
 
 @media only screen and (max-width: 767.98px) {
@@ -498,8 +493,14 @@ h1, h2, h3, h4, h5, h6, p, ul {
 }
 @media only screen and (min-width: 768px) {
         .features-list{
+        max-width: 356px;
+        display: flex;
+        flex-wrap: wrap;        }
+}
+@media screen and (min-width: 1158px) {
+        .features-list {
         max-width: 264px;
-        }
+}
 }
 
 .features-section {
@@ -1199,6 +1200,13 @@ a.media-list:focus {
         }
 }
 
+@media only screen and (min-width: 768px) {
+        .section-customers {
+        padding-left: 108px;
+        padding-right: 108px;
+        }
+}
+
 .customers-header {
         font-size: 36px;
         line-height: 1.11;
@@ -1213,7 +1221,7 @@ a.media-list:focus {
         display: flex;
         flex-wrap: wrap;
         row-gap: 72px;
-        column-gap: 16px;
+        column-gap: 24px;
         --items: 2;
         list-style-type: none;
 
@@ -1223,6 +1231,7 @@ a.media-list:focus {
         .customers-list {
         column-gap: var(--indent);
         --items: 3;
+        
         }
 }
 
@@ -1636,6 +1645,7 @@ a.media-list:focus {
         line-height: 1.11;
         letter-spacing: 0.72px;
         text-transform: capitalize;
+        flex-direction: row;
 }
 .address-mobile-mail {
         color: #434455;
